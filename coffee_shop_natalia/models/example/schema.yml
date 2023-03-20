@@ -2,20 +2,15 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: customers
+    description: "Date of the first order and number of orders"
     columns:
-      - name: id
+      - name: customer_id
         description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+
+  - name: limit_customers
+    description: "Limiting the customers to display only 5"
+    columns:
+      - name: customer_id
+        description: "The primary key"
